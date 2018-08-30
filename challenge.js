@@ -61,6 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Pause Button Functionality
   const pauseButton = document.querySelector('#pause');
+
   pauseButton.addEventListener("click", () => {
     if (pauseButton.innerText === "pause") {
       pauseButton.innerText = "resume";
@@ -80,7 +81,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let comment = document.querySelector("#comment");
     let li = document.createElement("li");
     li.appendChild(document.createTextNode(`${comment.value}`))
+    // same as writing: li.innerText = `${comment.value}`;
     commentSection.appendChild(li);
+    return
   })
-
 })
